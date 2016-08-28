@@ -13,33 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.appdynamics.extensions.linux;
+package com.appdynamics.extensions.apptweak;
 
 import com.singularity.ee.agent.systemagent.api.exception.TaskExecutionException;
-import org.junit.Assert;
+import org.apache.commons.httpclient.Header;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.Assert.assertEquals;
+
 /**
- * Created by balakrishnav on 16/10/15.
+ * Created by mariomann on 16/10/15.
  */
-public class LinuxMonitorTest {
+public class AppTweakMonitorTest {
 
     @Test
-    public void testLinuxMonitor() throws TaskExecutionException {
-        Map<String, String> taskArgs = new HashMap<String, String>();
+    public void testAppTweakMonitor() throws TaskExecutionException {
+        Map<String, String> taskArgs = new HashMap<>();
         taskArgs.put("config-file", "src/test/resources/conf/config.yml");
 
-        LinuxMonitor monitor = new LinuxMonitor();
+        AppTweakMonitor monitor = new AppTweakMonitor();
         monitor.execute(taskArgs, null);
     }
 
-    @Test
-    public void testNFSMountStatusProcessor() {
-        NFSMountStatusProcessor processor = new NFSMountStatusProcessor();
-        Assert.assertEquals(processor.execute("/dev/sda1"), "1");
-
-    }
 }

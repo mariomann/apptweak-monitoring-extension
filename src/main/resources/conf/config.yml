@@ -1,14 +1,10 @@
 
-# An availability status for NFS mounts is reported by executing the command `df | grep <fileSystem> | wc -l`.
-# displayName: the name with which the metric is reported in AppD Metric Browser. If empty, metric is reported with fileSystem as its name.
-mountedNFS:
-      - fileSystem: "/dev/sdb"
-        displayName: "NFS1"
+metricPrefix: "Custom Metrics|AppTweak|"
+token:  "raNOLwH21L-ULeTCUXlzGHUzmCo"
 
 
-# This will create this metric in all the tiers, under this path
-metricPrefix: "Custom Metrics|Linux|"
-
-# This will create it in specific Tier. Replace <ComponentID>
-# (https://docs.appdynamics.com/display/PRO42/Build+a+Monitoring+Extension+Using+Java)
-# metricPrefix: Server|Component:<ComponentID>|Custom Metrics|Linux
+mobileApplication:
+      - applicationId:  "com.db.mm.deutschebank"
+        country:  "de"
+        language: "en"
+        religion: "android"

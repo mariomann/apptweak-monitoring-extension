@@ -16,7 +16,7 @@
         </task-arguments>
         <java-task>
             <classpath>linux-monitoring-extension.jar</classpath>
-            <impl-class>com.appdynamics.extensions.linux.LinuxMonitor</impl-class>
+            <impl-class>com.appdynamics.extensions.apptweak.AppTweakMonitor</impl-class>
         </java-task>
     </monitor-run-task>
 </monitor>

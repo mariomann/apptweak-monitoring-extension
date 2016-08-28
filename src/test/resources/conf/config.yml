@@ -1,5 +1,10 @@
 
-mountedNFS:
-      - fileSystem: "/dev/sdb1"
-        displayName: "usb"
-metricPrefix: "Custom Metrics|Linux|"
+metricPrefix: "Custom Metrics|AppTweak|"
+token:  "raNOLwH21L-ULeTCUXlzGHUzmCo"
+
+
+mobileApplication:
+      - applicationId:  "com.db.mm.deutschebank"
+        country:  "de"
+        language: "en"
+        religion: "android"

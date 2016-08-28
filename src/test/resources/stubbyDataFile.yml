@@ -1,0 +1,89 @@
+#more specific on top
+-  request:
+      method: GET
+      url: /
+      query:
+         lol: rofl
+         hehe: hihi
+
+   response:
+      status: 200
+      headers:
+         content-type: application/xml
+      body: <lol>rofl</lol><hehe>hihi</hehe>
+
+-  request:
+      method: [GET, POST]
+      url: /
+
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      body: Hello basc.io
+
+- request:
+    method: POST
+    url: /lol
+    post: lol=rofl&hehe=hihi
+
+  response:
+     status: 200
+     headers:
+       content-type: application/xml
+     body: <lol>rofl</lol><hehe>hihi</hehe>
+
+- request:
+    method: POST
+    url: /redirection
+    post: lol=rofl
+
+  response:
+     status: 303
+     headers:
+       content-type: application/json
+       location: http://localhost:3003
+     body:
+
+-  request:
+      method: POST
+      url: /basic-auth$
+      post: lol=rofl
+      headers:
+         authorization-basic: "lol:rofl"
+   response:
+      - status: 200
+        headers:
+          Content-Type: application/xml
+        body: <auth>successfully authorized</auth>
+      - status: 401
+        headers:
+          Content-Type: application/xml
+        body: <auth>Unauthorized</auth>
+
+-  request:
+      method: GET
+      url: /basic-auth
+      query:
+        lol: rofl
+      headers:
+         authorization-basic: "lol:rofl"
+   response:
+      - status: 200
+        headers:
+          Content-Type: application/xml
+        body: <auth>successfully authorized</auth>
+      - status: 401
+        headers:
+          Content-Type: application/xml
+        body: <auth>Unauthorized</auth>
+
+- request:
+    method: POST
+    url: /auth/login
+    post: 'fallback=data'
+  response:
+     status: 200
+     headers:
+       content-type: application/xml
+     body: <state>yes</state>

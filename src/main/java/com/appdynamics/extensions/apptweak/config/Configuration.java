@@ -13,23 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.appdynamics.extensions.linux.config;
+package com.appdynamics.extensions.apptweak.config;
 
 /**
- * Created by balakrishnav on 19/10/15.
+ * Created by mariomann on 23/08/16.
  */
 public class Configuration {
 
-    private MountedNFS[] mountedNFS;
     private String metricPrefix;
-
-    public MountedNFS[] getMountedNFS() {
-        return mountedNFS;
-    }
-
-    public void setMountedNFS(MountedNFS[] mountedNFS) {
-        this.mountedNFS = mountedNFS;
-    }
+    private MobileApplication[] mobileApplication;
+    private String token;
 
     public String getMetricPrefix() {
         return metricPrefix;
@@ -37,5 +30,19 @@ public class Configuration {
 
     public void setMetricPrefix(String metricPrefix) {
         this.metricPrefix = metricPrefix;
+    }
+
+    public MobileApplication[] getMobileApplication() {
+        return mobileApplication;
+    }
+
+    public void setMobileApplication(MobileApplication[] applications) {
+        this.mobileApplication = applications;
+    }
+
+    public String getToken() { return token; }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
