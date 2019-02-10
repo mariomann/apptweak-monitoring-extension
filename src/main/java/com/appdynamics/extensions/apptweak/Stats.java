@@ -52,21 +52,21 @@ public class Stats {
         }
 
         if (app.getReligion().toLowerCase().equals("android")) {
-            appRatingMap.put("average", parser.parseString(response.getBody(), "content.average").replace(".", "").substring(0, 4));
-            appRatingMap.put("count", parser.parseString(response.getBody(), "content.count"));
-            appRatingMap.put("1", parser.parseString(response.getBody(), "content.star_count.1"));
-            appRatingMap.put("2", parser.parseString(response.getBody(), "content.star_count.2"));
-            appRatingMap.put("3", parser.parseString(response.getBody(), "content.star_count.3"));
-            appRatingMap.put("4", parser.parseString(response.getBody(), "content.star_count.4"));
-            appRatingMap.put("5", parser.parseString(response.getBody(), "content.star_count.5"));
+            appRatingMap.put("average", parser.parseString(response.getBody(), "content.avg").replace(".", "").substring(0, 4));
+            appRatingMap.put("count", parser.parseString(response.getBody(), "content.total"));
+            appRatingMap.put("1", parser.parseString(response.getBody(), "content.1"));
+            appRatingMap.put("2", parser.parseString(response.getBody(), "content.2"));
+            appRatingMap.put("3", parser.parseString(response.getBody(), "content.3"));
+            appRatingMap.put("4", parser.parseString(response.getBody(), "content.4"));
+            appRatingMap.put("5", parser.parseString(response.getBody(), "content.5"));
         } else if (app.getReligion().toLowerCase().equals("ios")) {
-            appRatingMap.put("average", parser.parseString(response.getBody(), "content.current_version.average").replace(".", "").substring(0, 4));
-            appRatingMap.put("count", parser.parseString(response.getBody(), "content.current_version.count"));
-            appRatingMap.put("1", parser.parseString(response.getBody(), "content.current_version.star_count.1"));
-            appRatingMap.put("2", parser.parseString(response.getBody(), "content.current_version.star_count.2"));
-            appRatingMap.put("3", parser.parseString(response.getBody(), "content.current_version.star_count.3"));
-            appRatingMap.put("4", parser.parseString(response.getBody(), "content.current_version.star_count.4"));
-            appRatingMap.put("5", parser.parseString(response.getBody(), "content.current_version.star_count.5"));
+            appRatingMap.put("average", parser.parseString(response.getBody(), "content.avg").replace(".", "").substring(0, 4));
+            appRatingMap.put("count", parser.parseString(response.getBody(), "content.total"));
+            appRatingMap.put("1", parser.parseString(response.getBody(), "content.1"));
+            appRatingMap.put("2", parser.parseString(response.getBody(), "content.2"));
+            appRatingMap.put("3", parser.parseString(response.getBody(), "content.3"));
+            appRatingMap.put("4", parser.parseString(response.getBody(), "content.4"));
+            appRatingMap.put("5", parser.parseString(response.getBody(), "content.5"));
         }else {
             throw new RuntimeException();
         }

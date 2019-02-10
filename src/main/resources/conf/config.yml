@@ -4,7 +4,8 @@ token:  "raNOLwH21L-ULeTCUXlzGHUzmCo"
 
 
 mobileApplication:
-      - applicationId:  "com.db.mm.deutschebank"
+      - applicationId:  "1040475847"
         country:  "de"
         language: "en"
-        religion: "android"
+        religion: "ios"
+      -
